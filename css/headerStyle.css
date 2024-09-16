@@ -1,0 +1,46 @@
+/* header.css */
+
+header {
+    background-color: #333;
+    color: white;
+    padding: 10px 0;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.left h1 {
+    margin: 0;
+    color: white;
+    text-decoration: none;
+}
+
+.left a {
+    text-decoration: none;
+}
+
+.right a {
+    color: white;
+    text-decoration: none;
+    margin-left: 20px;
+}
+
+.right a:hover {
+    text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        text-align: center;
+    }
+    .right {
+        margin-top: 10px;
+    }
+}

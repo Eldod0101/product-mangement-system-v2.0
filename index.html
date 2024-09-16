@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRUDS Operations Pure JavaScript</title>
+    <link id="themeStylesheet" rel="stylesheet" href="css/nightStyle.css">
+    <link rel="stylesheet" href="css/headerStyle.css">
+
+</head>
+
+<body>
+    <div id="header-div">
+        <header>
+            <div class="container">
+                <div class="left">
+
+                    <a href="index.html">
+                        <h1>CRUDS</h1>
+                    </a>
+                </div>
+                <div class="right">
+                    <a href="index.html">All Products</a>
+                    <a href="SelledProducts.html">Saled Products</a>
+                    <button id="toggleMode">Toggle Mode</button>
+                </div>
+            </div>
+        </header>
+    </div>
+    <div class="cruds">
+        <div class="head">
+            <p>product mangement system</p>
+        </div>
+
+        <div class="inputs">
+            <input type="text" id="title" placeholder="title">
+            <div class="price">
+                <input min="0" onpointerup="getTotal()" onpointerdown="getTotal()" onkeyup="getTotal()" type="number" id="price" placeholder="price">
+                <input min="0" onpointerup="getTotal()" onpointerdown="getTotal()" onkeyup="getTotal()" type="number" id="tax" placeholder="tax">
+                <input min="0" onpointerup="getTotal()" onpointerdown="getTotal()" onkeyup="getTotal()" type="number" id="ads" placeholder="ads">
+                <input min="0" onpointerup="getTotal()" onpointerdown="getTotal()" onkeyup="getTotal()" type="number" id="discount" placeholder="discount">
+                <small id="total"></small>
+            </div>
+            <input min="1" type="number" id="count" placeholder="count">
+            <input type="text" id="category" placeholder="category" list="categories">
+            <datalist id="categories"></datalist>
+            <button id="submit">create</button>
+        </div>
+
+        <div class="outputs">
+            <input onkeyup="searchData(this.value)" type="text" id="search" placeholder="Search by title">
+            <div class="btnSearchOptions">
+                <button onclick="getSearchMood(this.id)" id="searchTitle">Search By Title</button>
+                <button onclick="getSearchMood(this.id)" id="searchCategory">Search By Category</button>
+            </div>
+            <div id="deleteAll">Delete All</div>
+            <table>
+                <tr>
+                    <th>id</th>
+                    <th>title</th>
+                    <th>price</th>
+                    <th>tax</th>
+                    <th>ads</th>
+                    <th>discount</th>
+                    <th>total</th>
+                    <th>category</th>
+                    <th>count</th>
+                    <th>Functions</th>
+                    <th>Selled</th>
+                </tr>
+
+                <tbody id="tbody">
+
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <footer>
+
+        <p>Copyright © 2024 <span>CRUDS</span>. All Rights Reserved. Programmed by Eldod - 2024</p>
+    </footer>
+    <script src="js/script.js"></script>
+</body>
+
+</html>
